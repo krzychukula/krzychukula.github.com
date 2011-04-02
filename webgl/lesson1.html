@@ -5,8 +5,8 @@
 <title>3dgames Lekcja01</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<script type="text/javascript" src="/js/sylvester.js"></script>
-<script type="text/javascript" src="/js/glUtils.js"></script>
+<script type="text/javascript" src="/webgl/js/sylvester.js"></script>
+<script type="text/javascript" src="/webgl/js/glUtils.js"></script>
 
 <script id="shader-fs" type="x-shader/x-fragment">
   #ifdef GL_ES
@@ -48,10 +48,7 @@
     } catch(e) {
     }
     if (!gl) {
-	  if( confirm("Could not initialise WebGL, Sorry :( \nDo you want to go to browser installation page?") )
-	  {
-		location.href="http://3dgames.pl/blog/2010/03/ustawienia-przegladarki/";
-	  }
+	  document.write('Problem with initialization, try to reload or try another browser.');
 	}
   }
 
@@ -137,7 +134,7 @@
       handleLoadedTexture(firstTexture)
     }
 
-    firstTexture.image.src = "/img/logo.jpg";
+    firstTexture.image.src = "/webgl/img/logo.jpg";
   }
 
 
@@ -203,10 +200,10 @@
     cubeVertexIndexBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
     var cubeVertexIndices = [
-      //first triangle
-	  0, 1, 2,
-	  //second triangle
-      0, 2, 3,
+        //first triangle
+        0, 1, 2,
+        //second triangle
+        0, 2, 3,
     ]
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
     cubeVertexIndexBuffer.itemSize = 1;
