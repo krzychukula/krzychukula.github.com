@@ -1,34 +1,266 @@
-<!DOCTYPE HTML>
 <html>
+
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>krzychukula</title>
+<title>3dgames Lekcja01</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript" src="sylvester.js"></script>
+<script type="text/javascript" src="glUtils.js"></script>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+  #ifdef GL_ES
+	precision highp float;
+  #endif
+  varying vec2 vTextureCoord;
+
+  uniform sampler2D uSampler;
+
+  void main(void) {
+    gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, 1.0 - vTextureCoord.t));
+  }
+</script>
+
+<script id="shader-vs" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec2 aTextureCoord;
+
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
+
+  varying vec2 vTextureCoord;
+
+
+  void main(void) {
+    gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+    vTextureCoord = aTextureCoord;
+  }
+</script>
+
+
+<script type="text/javascript">
+
+  var gl;
+  function initGL(canvas) {
+    try {
+      gl = canvas.getContext("experimental-webgl");
+      gl.viewport(0, 0, canvas.width, canvas.height);
+    } catch(e) {
+    }
+    if (!gl) {
+	  if( confirm("Could not initialise WebGL, Sorry :( \nDo you want to go to browser installation page?") )
+	  {
+		location.href="http://3dgames.pl/blog/2010/03/ustawienia-przegladarki/";
+	  }
+	}
+  }
+
+
+  function getShader(gl, id) {
+    var shaderScript = document.getElementById(id);
+    if (!shaderScript) {
+      return null;
+    }
+
+    var str = "";
+    var k = shaderScript.firstChild;
+    while (k) {
+      if (k.nodeType == 3) {
+        str += k.textContent;
+      }
+      k = k.nextSibling;
+    }
+
+    var shader;
+    if (shaderScript.type == "x-shader/x-fragment") {
+      shader = gl.createShader(gl.FRAGMENT_SHADER);
+    } else if (shaderScript.type == "x-shader/x-vertex") {
+      shader = gl.createShader(gl.VERTEX_SHADER);
+    } else {
+      return null;
+    }
+
+    gl.shaderSource(shader, str);
+    gl.compileShader(shader);
+
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      alert(gl.getShaderInfoLog(shader));
+      return null;
+    }
+
+    return shader;
+  }
+
+
+  var shaderProgram;
+  function initShaders() {
+    var fragmentShader = getShader(gl, "shader-fs");
+    var vertexShader = getShader(gl, "shader-vs");
+
+    shaderProgram = gl.createProgram();
+    gl.attachShader(shaderProgram, vertexShader);
+    gl.attachShader(shaderProgram, fragmentShader);
+    gl.linkProgram(shaderProgram);
+
+    if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+      alert("Could not initialise shaders");
+    }
+
+    gl.useProgram(shaderProgram);
+
+    shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+    gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+    shaderProgram.textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
+    gl.enableVertexAttribArray(shaderProgram.textureCoordAttribute);
+
+    shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
+    shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+    shaderProgram.samplerUniform = gl.getUniformLocation(shaderProgram, "uSampler");
+  }
+
+
+  function handleLoadedTexture(texture) {
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, texture.image);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.bindTexture(gl.TEXTURE_2D, null);
+  }
+
+
+  var firstTexture;
+  function initTexture() {
+    firstTexture = gl.createTexture();
+    firstTexture.image = new Image();
+    firstTexture.image.onload = function() {
+      handleLoadedTexture(firstTexture)
+    }
+
+    firstTexture.image.src = "logo.jpg";
+  }
+
+
+  var mvMatrix;
+  var mvMatrixStack = [];
+
+  function loadIdentity() {
+    mvMatrix = Matrix.I(4);
+  }
+
+
+  function multMatrix(m) {
+    mvMatrix = mvMatrix.x(m);
+  }
+
+  function mvTranslate(v) {
+    var m = Matrix.Translation($V([v[0], v[1], v[2]])).ensure4x4();
+    multMatrix(m);
+  }
+
+  var pMatrix;
+  function perspective(fovy, aspect, znear, zfar) {
+    pMatrix = makePerspective(fovy, aspect, znear, zfar);
+  }
+
+
+  function setMatrixUniforms() {
+    gl.uniformMatrix4fv(shaderProgram.pMatrixUniform, false, new Float32Array(pMatrix.flatten()));
+    gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, new Float32Array(mvMatrix.flatten()));
+  }
+
+
+  var cubeVertexPositionBuffer;
+  var cubeVertexTextureCoordBuffer;
+  var cubeVertexIndexBuffer;
+  function initBuffers() {
+    cubeVertexPositionBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
+    vertices = [
+      // Front face
+      -1.0, -1.0,  1.0,
+       1.0, -1.0,  1.0,
+       1.0,  1.0,  1.0,
+      -1.0,  1.0,  1.0,
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+    cubeVertexPositionBuffer.itemSize = 3;
+    cubeVertexPositionBuffer.numItems = 4;
+
+    cubeVertexTextureCoordBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
+    var textureCoords = [
+      // Front face
+      0.0, 0.0,
+      1.0, 0.0,
+      1.0, 1.0,
+      0.0, 1.0,
+    ];
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoords), gl.STATIC_DRAW);
+    cubeVertexTextureCoordBuffer.itemSize = 2;
+    cubeVertexTextureCoordBuffer.numItems = 4;
+
+    cubeVertexIndexBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
+    var cubeVertexIndices = [
+      //first triangle
+	  0, 1, 2,
+	  //second triangle
+      0, 2, 3,
+    ]
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
+    cubeVertexIndexBuffer.itemSize = 1;
+    cubeVertexIndexBuffer.numItems = 6;
+  }
+
+
+  function drawScene() {
+    gl.clear(gl.COLOR_BUFFER_BIT)
+
+    perspective(45, 1.333, 0.1, 100.0);
+    loadIdentity();
+
+    mvTranslate([0.0, 0.0, -5.0])
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
+    gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, cubeVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+
+    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
+    gl.vertexAttribPointer(shaderProgram.textureCoordAttribute, cubeVertexTextureCoordBuffer.itemSize, gl.FLOAT, false, 0, 0);
+
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, firstTexture);
+    gl.uniform1i(shaderProgram.samplerUniform, 0);
+
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
+    setMatrixUniforms();
+    gl.drawElements(gl.TRIANGLES, cubeVertexIndexBuffer.numItems, gl.UNSIGNED_SHORT, 0);
+  }
+
+
+
+  function webGLStart() {
+    var canvas = document.getElementById("lekcja01-canvas");
+    initGL(canvas);
+    initShaders();
+    initBuffers();
+    initTexture();
+
+    gl.clearColor(0.8, 0.8, 0.8, 1.0);
+    setInterval(drawScene, 15);
+  }
+
+
+
+</script>
+
+
 </head>
 
-<body>
 
-        <header>
-                <nav>
-                        <ul>
-                                <li></li>
-                        </ul>
-                </nav>
-        </header>
-        <section>
-                <article>
-                        <header>
-                                <h2>Static page</h2>
-                               
-                        </header>
-                        <p>This is static page for testing purposes.</p>
-                </article>
-
-        </section>
-
-        <footer>
-                <p>Copyright 2011 Krzysztof Kula</p>
-        </footer>
-
+ 
+<body onload="webGLStart();"> 
+  <canvas id="lekcja01-canvas" style="border: none;" width="640" height="480"></canvas>
+  
 </body>
-</html>
 
+</html>
