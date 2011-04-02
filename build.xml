@@ -1,0 +1,14 @@
+<project name="site" default="webgl" basedir=".">
+	<property name="src" location="webgl" />
+	<property name="dist" location="/var/www/webgl" />
+	
+	<target name="webgl" depends="clean">
+		<copy todir="${dist}">
+		    <fileset dir="${src}"/>
+		</copy>
+	</target>
+	
+	<target name="clean" description="clean up" >	 
+	    <delete dir="${dist}"/>
+	</target>
+</project>
