@@ -3,8 +3,8 @@
 	<property name="webgldist" location="/var/www/webgl" />
 	<property name="testsrc" location="test" />
 	<property name="testdist" location="/var/www/test" />
-	<property name="jssrc" location="test" />
-	<property name="jsdist" location="/var/www/test" />
+	<property name="jssrc" location="js" />
+	<property name="jsdist" location="/var/www/js" />
 	
 	<target name="webgl" depends="cleanwebgl">
 		<copy todir="${webgldist}">
