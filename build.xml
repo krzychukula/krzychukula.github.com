@@ -1,14 +1,32 @@
 <project name="site" default="webgl" basedir=".">
-	<property name="src" location="webgl" />
-	<property name="dist" location="/var/www/webgl" />
+	<property name="webglsrc" location="webgl" />
+	<property name="webgldist" location="/var/www/webgl" />
+	<property name="testsrc" location="test" />
+	<property name="testdist" location="/var/www/test" />
+	<property name="jssrc" location="test" />
+	<property name="jsdist" location="/var/www/test" />
 	
-	<target name="webgl" depends="clean">
-		<copy todir="${dist}">
-		    <fileset dir="${src}"/>
+	<target name="webgl" depends="cleanwebgl">
+		<copy todir="${webgldist}">
+		    <fileset dir="${webglsrc}"/>
 		</copy>
 	</target>
 	
-	<target name="clean" description="clean up" >	 
-	    <delete dir="${dist}"/>
+	<target name="cleanwebgl" description="clean up" >	 
+	    	<delete dir="${webgldist}"/>
+	</target>
+
+	<target name="site" depends="cleansite">
+		<copy todir="${testdist}">
+		    <fileset dir="${testsrc}"/>
+		</copy>
+		<copy todir="${jsdist}">
+		    <fileset dir="${jssrc}"/>
+		</copy>
+	</target>
+
+	<target name="cleansite" description="clean up" >	 
+	    	<delete dir="${testdist}"/>
+		<delete dir="${jsdist}"/>
 	</target>
 </project>
