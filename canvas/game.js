@@ -52,10 +52,20 @@ var MoveCircles = function(deltaY){
 	}
 };
 
-var GameLoop = function(){
+window.requestAnimFrame = (function(){
+	return window.requestAnimationFrame ||
+		window.webkitRequestAnimationFrame	||
+		window.mozRequestAnimationFrame		||
+		window.oRequestAnimationFrame		||
+		window.msRequestAnimationFrame		||
+		function( callback, element){
+			window.setTimeout(callback, 1000 / 60 );
+		}
+})();
+
+(function GameLoop(){
 	clear();
 	MoveCircles(5);
 	DrawCircles();
-	gLoop = setTimeout(GameLoop, 1000 / 50);
-}
-GameLoop();
+	requestAnimFrame(GameLoop, c);
+})();
