@@ -64,6 +64,10 @@ var player = new (function(){
 	that.X = 0;
 	that.Y = 0;
 
+	that.frames = 1;
+	that.actualFrame = 0;
+	that.interval = 0;
+
 	that.setPosition = function(x, y){
 		that.X = x;
 		that.Y = y;
@@ -71,11 +75,21 @@ var player = new (function(){
 	
 	that.draw = function(){
 		try{
-			ctx.drawImage(that.image, 0, 0, that.width, that.height, that.X, that.Y, that.width, that.height);
+			ctx.drawImage(that.image, 0, that.height*that.actualFrame, that.width, that.height, that.X, that.Y, that.width, that.height);
 			//drawImage(Image Object, sourceX, sY, sWidht, sHeight, destinationX, dY, dWidth, dHeight)
 		}catch(e){
 			//first frame problem...	
 		}
+		if(that.interval == 4){
+			if(that.actualFrame == that.frames){
+				that.actualFrame = 0;
+			}else{
+				that.actualFrame++;
+			}
+			that.interval = 0;
+		}
+		that.interval++;
+		//switch frames in 4 loops
 	}
 })();
 
