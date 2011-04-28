@@ -52,6 +52,35 @@ var MoveCircles = function(deltaY){
 	}
 };
 
+var player = new (function(){
+	var that = this;
+	
+	that.image = new Image();
+	that.image.src = 'angel.png';
+	
+	that.width = 65;
+	that.height = 95;
+	
+	that.X = 0;
+	that.Y = 0;
+
+	that.setPosition = function(x, y){
+		that.X = x;
+		that.Y = y;
+	}
+	
+	that.draw = function(){
+		try{
+			ctx.drawImage(that.image, 0, 0, that.width, that.height, that.X, that.Y, that.width, that.height);
+			//drawImage(Image Object, sourceX, sY, sWidht, sHeight, destinationX, dY, dWidth, dHeight)
+		}catch(e){
+			//first frame problem...	
+		}
+	}
+})();
+
+player.setPosition(~~((width-player.width)/2), ~~((height - player.height)/2));
+
 window.requestAnimFrame = (function(){
 	return window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame	||
@@ -67,5 +96,6 @@ window.requestAnimFrame = (function(){
 	clear();
 	MoveCircles(5);
 	DrawCircles();
+	player.draw();
 	requestAnimFrame(GameLoop, c);
 })();
