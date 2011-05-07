@@ -68,6 +68,12 @@ var player = new (function(){
 	that.actualFrame = 0;
 	that.interval = 0;
 
+    that.isJumping = false;
+    that.isFalling = false;
+
+    that.jumpSpeed = 0;
+    that.fallSpeed = 0;
+
 	that.setPosition = function(x, y){
 		that.X = x;
 		that.Y = y;
@@ -91,9 +97,75 @@ var player = new (function(){
 		that.interval++;
 		//switch frames in 4 loops
 	}
+
+    that.moveLeft = function(){
+        if(that.X > 0){
+            //check if object is inside the screen
+            that.setPosition(that.X - 5, that.Y);
+        }
+    }
+
+    that.moveRight = function(){
+        if(that.X + that.width < width){
+            //if object inside screen
+            that.setPosition(that.X + 5, that.Y);
+        }
+    }
+
+
+    that.jump = function(){
+        //initialization of the jump
+        if(!that.isJumping && !that.isFalling){
+            //if object isn't currently jumping or falling
+            //(preventing of 'double jumps', or bouncing from the air
+            that.fallSpeed = 0;
+            that.isJumping = true;
+            that.jumpSpeed = 17;
+            //initial velocity
+        }
+    }
+
+    that.checkJump = function(){
+        //when 'jumping' action was initialized by jump() method
+        //initiative is taken by this one
+        that.setPosition(that.X, that.Y - that.jumpSpeed);
+        //move object by number of pixels equal to current value of jumpSpeed
+        that.jumpSpeed--;
+        //and decease it (simulate of gravity)
+        if(that.jumpSpeed == 0){
+            //start to falling, similar to jump() function
+            that.isJumping = false;
+            that.isFalling = true;
+            that.fallSpeed = 1;
+        }
+    }
+
+    that.checkFall = function(){
+        //same situation as in checkJump()
+        if(that.Y < height - that.height){
+            //check if the object meets the bottom of the screen, if not just
+            //change the position and increase the fall Speed (gravity acceleration)
+            that.setPosition(that.X, that.Y + that.fallSpeed);
+            that.fallSpeed++;
+        }else{
+            //if yes - bounce
+            that.fallStop();
+        }
+    }
+
+    that.fallStop = function(){
+        //stop falling, start jumping again
+        that.isFalling = false;
+        that.fallSpeed = 0;
+        that.jump();
+    }
+
+    
 })();
 
 player.setPosition(~~((width-player.width)/2), ~~((height - player.height)/2));
+//initial jump
+player.jump();
 
 window.requestAnimFrame = (function(){
 	return window.requestAnimationFrame ||
@@ -110,6 +182,23 @@ window.requestAnimFrame = (function(){
 	clear();
 	MoveCircles(5);
 	DrawCircles();
+    if(player.isJumping){
+        player.checkJump();
+    }
+    if(player.isFalling){
+        player.checkFall();
+    }
 	player.draw();
 	requestAnimFrame(GameLoop, c);
 })();
+
+document.onmousemove = function(e){
+    if(player.X + c.offsetLeft > e.pageX){
+        //if mouse is on the left side of the player
+        player.moveLeft();
+    }else if(player.X + c.offsetLeft < e.pageX){
+        //or on right
+        player.moveRight();
+    }
+}
+
