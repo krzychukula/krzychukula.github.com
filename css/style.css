@@ -81,9 +81,9 @@ a:hover { color: #036; }
  * Author: 
  */
 
-
-
-
+nav a {
+	display: block;
+}
 
 
 
