@@ -8,4 +8,4 @@ require('http').createServer(function (request, response) {
         // Serve files!
         file.serve(request, response);
     });
-}).listen(8080);
+}).listen(process.env.PORT);
