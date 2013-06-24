@@ -828,3 +828,14 @@ textarea {
     }
 }
 
+
+.container {
+    margin:3em auto;
+    max-width: 20em;
+}
+
+.main-nav a {
+    display: block;
+    margin: 1em;
+}
+
