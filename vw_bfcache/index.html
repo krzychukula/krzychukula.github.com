@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>test case of vw bug when loaded form bfcache</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .use-vw {
+      font-size: 5vw;
+    }
+    .use-vh {
+      font-size: 5vh;
+    }
+    .use-em {
+      font-size: 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="use-vw">
+    Text using vw font size
+    <p class="use-em">
+      Text using em inside vw
+    </p>
+  </section>
+  <section class="use-em">
+    Text using em font size
+    <p class="use-vw">
+      Text using vw inside em
+    </p>
+  </section>
+  <section class="use-vh">
+    Text using vh font size
+    <p class="use-em">
+      Text using em inside vh
+    </p>
+  </section>
+  <section class="use-em">
+    Text using em font size
+    <p class="use-vh">
+      Text using vh inside em
+    </p>
+  </section>
+
+  <ol>
+    <li>Wait for page load (mobile safari)
+    <li>Go to another page
+    <li>Click back button
+    <li>See font-size with 0 height
+  </ol>
+
+  <a href="page_to_go_to.html">Go to another page</a>
+
+
+</body>
+</html>
