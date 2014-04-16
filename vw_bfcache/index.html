@@ -14,6 +14,35 @@
     .use-em {
       font-size: 1em;
     }
+
+    .hnews {
+        font-size: 1.2em;
+        font-size: 5.5vw;
+        line-height: 1.2em;
+        padding: 0;
+        margin-bottom: 11px;
+        width: 100%;
+        float: left;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #fff;
+        box-shadow: 0 0 3px rgba(0,0,0,.1);
+    }
+    h2 {
+        margin-top: 0;
+        font-size: 1.5em;
+        overflow: hidden;
+    }
+    .entry-title {
+        font-weight: 700;
+        padding: 0 5px 9px 4px;
+        font-size: .95em;
+        word-wrap: break-word;
+        line-height: 1.15em;
+        margin-bottom: 0;
+        letter-spacing: -.05em;
+    }
   </style>
 </head>
 
@@ -44,6 +73,8 @@
     </p>
   </section>
 
+  (Should be 8 elements)
+
   <ol>
     <li>Wait for page load (mobile safari)
     <li>Go to another page
@@ -52,6 +83,26 @@
   </ol>
 
   <a href="page_to_go_to.html">Go to another page</a>
+
+
+
+
+  <article class="hnews hentry item " itemscope="" itemtype="http://schema.org/NewsArticle">
+				<a class="url" href="page_to_go_to.html" rel="bookmark" itemprop="url">
+
+							<div class="hmedia image-wrapper ratio_16-9">
+								<img itemprop="image" class="photo" width="350" height="150" alt="" src="http://placehold.it/350x150">
+							</div>
+
+            <span class="articleSection" itemprop="articleSection">Section</span>
+						<h3 class="runninghead"></h3>
+						<h2 class="entry-title" itemprop="name">Title of article</h2>
+						<span class="frontpageleadtext">Lead text</span>
+				</a>
+
+
+			</article>
+
 
 
 </body>
