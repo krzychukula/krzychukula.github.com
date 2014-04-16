@@ -5,6 +5,22 @@
   <title>test case of vw bug when loaded form bfcache</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: Georgia,Times,"Times New Roman",serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+    }
+    a, a:link, a:visited, a:hover, a:active {
+        color: #000;
+        text-decoration: none;
+    }
     .use-vw {
       font-size: 5vw;
     }
@@ -19,6 +35,7 @@
         font-size: 1.2em;
         font-size: 5.5vw;
         line-height: 1.2em;
+        line-height: 6.6vw;
         padding: 0;
         margin-bottom: 11px;
         width: 100%;
@@ -42,6 +59,11 @@
         line-height: 1.15em;
         margin-bottom: 0;
         letter-spacing: -.05em;
+    }
+    .hmedia {
+        width: 40%;
+        float: left;
+        margin-right: 1%;
     }
   </style>
 </head>
