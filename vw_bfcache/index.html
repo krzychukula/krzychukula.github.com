@@ -30,7 +30,7 @@
     }
     .box_vw {
       background-color: green;
-      height: 5vw;
+      height: 10vw;
       width: 50vw;
     }
     .box_vh {
@@ -87,6 +87,7 @@
 </head>
 
 <body>
+  <p>Instruction<p>
   <ol>
     <li>Wait for page load (mobile safari)
     <li>Click "Go to another page"
@@ -99,7 +100,7 @@
     <a href="page_to_go_to.html">Go to another page</a>
   </h1>
 
-  (Should be 8 elements)
+  <h2>(Should be 8 elements)</h2>
   <section class="use-vw">
     1 Text using vw font size
     <p class="use-em">
@@ -127,15 +128,14 @@
 
 
 
+  <h2>The ones below should have green boxes inside<h2>
+  <div class="box">
+    <div class="box_vw">vwBox</div>
+  </div>
 
-      The ones below should have green boxes inside
-      <div class="box">
-        <div class="box_vw">vwBox</div>
-      </div>
-
-      <div class="box">
-        <div class="box_vh">vhBox</div>
-      </div>
+  <div class="box">
+    <div class="box_vh">vhBox</div>
+  </div>
 
 
 
