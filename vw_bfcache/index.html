@@ -21,6 +21,24 @@
         color: #000;
 /*        text-decoration: none;*/
     }
+    .box {
+      background-color: red;
+      min-height: 4f0px;
+      clear: both;
+      margin: 1em 0;
+      width: 100%;
+    }
+    .box_vw {
+      background-color: green;
+      height: 5vw;
+      width: 50vw;
+    }
+    .box_vh {
+      background-color: green;
+      height: 5vh;
+      width: 20vh;
+    }
+
     .use-vw {
       font-size: 5vw;
     }
@@ -125,6 +143,16 @@
 
 
 			</article>
+
+
+      The ones below should have green boxes inside
+      <div class="box">
+        <div class="box_vw">vwBox</div>
+      </div>
+
+      <div class="box">
+        <div class="box_vh">vhBox</div>
+      </div>
 
 <img itemprop="image" class="photo" width="350" height="150" alt="" src="http://placehold.it/350x150">
 <img itemprop="image" class="photo" width="350" height="150" alt="" src="http://placehold.it/350x150?12">
