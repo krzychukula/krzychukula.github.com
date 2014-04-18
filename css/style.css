@@ -23,17 +23,6 @@ body {
     line-height: 1.4;
 }
 
-a {
-    color: #00e;
-}
-
-a:visited {
-    color: #551a8b;
-}
-
-a:hover {
-    color: #06e;
-}
 
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
@@ -66,7 +55,15 @@ textarea {
    ========================================================================== */
 
 
+.container {
+    max-width: 35em;
+    margin: 0 auto;
+}
 
+
+footer {
+    margin: 2em 0 1em;
+}
 
 
 
