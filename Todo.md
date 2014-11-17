@@ -3,3 +3,6 @@ Test file created from iphone
 
 [] think about moving blog to octopress/github pages
 [] is there any way to integrate it with ifttt.com?
+
+Outliers blinkist
+the hitch hikers guide to the laxy
