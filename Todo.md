@@ -6,3 +6,5 @@ Test file created from iphone
 
 Outliers blinkist
 the hitch hikers guide to the laxy
+how we learn blinkist
+build to last blinkist
