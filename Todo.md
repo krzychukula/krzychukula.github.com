@@ -15,3 +15,5 @@ how we learn blinkist
 build to last blinkist
 
 fascinate blinkist
+
+launch blinkist
