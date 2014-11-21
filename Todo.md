@@ -17,3 +17,5 @@ build to last blinkist
 fascinate blinkist
 
 launch blinkist
+
+Remote blinkist
