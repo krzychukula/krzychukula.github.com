@@ -21,3 +21,5 @@ launch blinkist
 Remote blinkist
 
 How google works blinkist
+
+made To stick blinkist
