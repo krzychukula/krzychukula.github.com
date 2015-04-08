@@ -6,3 +6,5 @@
 
 [![Duty Calls](http://imgs.xkcd.com/comics/duty_calls.png "Duty Calls by xkcd")](https://xkcd.com/386/)
  
+“Don’t complain; just work harder.” 
+― Randy Pausch
