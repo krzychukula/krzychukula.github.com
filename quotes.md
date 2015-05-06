@@ -8,3 +8,6 @@
  
 “Don’t complain; just work harder.” 
 ― Randy Pausch
+
+“Installing software is like a first date: if it can't be polite, smart, and generous, what should I expect later?”
+― Scott Berkun
