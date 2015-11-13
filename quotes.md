@@ -11,3 +11,6 @@
 
 “Installing software is like a first date: if it can't be polite, smart, and generous, what should I expect later?”
 ― Scott Berkun
+
+“There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
+― Bjarne Stroustrup
