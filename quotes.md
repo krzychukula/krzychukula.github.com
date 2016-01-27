@@ -14,3 +14,9 @@
 
 “There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
 ― Bjarne Stroustrup
+
+“If you are neutral in situations of injustice, you have chosen the side of the oppressor. If an elephant has its foot on the tail of a mouse and you say that you are neutral, the mouse will not appreciate your neutrality.”
+— Desmond Tutu
+
+“Be conservative in what you do, be liberal in what you accept from others (often reworded as "Be conservative in what you send, be liberal in what you accept”
+— Jon Postel
