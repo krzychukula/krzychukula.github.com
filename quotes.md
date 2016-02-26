@@ -20,3 +20,6 @@
 
 “Be conservative in what you do, be liberal in what you accept from others (often reworded as "Be conservative in what you send, be liberal in what you accept”
 — Jon Postel
+
+“Learning about "for" loops is not learning to program, any more than learning about pencils is learning to draw.”
+— Bret Victor
