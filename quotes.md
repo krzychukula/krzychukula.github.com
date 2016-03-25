@@ -23,3 +23,5 @@
 
 “Learning about "for" loops is not learning to program, any more than learning about pencils is learning to draw.”
 — Bret Victor
+
+"Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." - Paul Graham (http://paulgraham.com/todo.html)
