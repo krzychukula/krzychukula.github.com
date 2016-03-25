@@ -42,3 +42,10 @@ Function is a relation between two values: the input and the output.
 * Testable
 * Reasonable
 * Parallel Code
+
+# Chapter 4: Currying
+
+var curry = require('lodash/curry')
+
+"Giving a function fewer arguments that it expects is typically called partial application"
+For some reason exercises are cryptic and I have no idea what I'm expected to do. Skipping.
