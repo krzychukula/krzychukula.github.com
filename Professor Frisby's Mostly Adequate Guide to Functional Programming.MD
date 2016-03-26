@@ -49,3 +49,57 @@ var curry = require('lodash/curry')
 
 "Giving a function fewer arguments that it expects is typically called partial application"
 For some reason exercises are cryptic and I have no idea what I'm expected to do. Skipping.
+
+# Chapter 5: Coding by Composing
+```
+var compose = function(f, g) {
+  return function(x) {
+    return f(g(x));
+  };
+};
+```
+
+```
+// associativity
+var associate = compose(f, compose(g, h)) == compose(compose(f, g), h);
+// true
+```
+
+## Pointfree
+
+## Debugging
+```
+var trace = curry(function(tag, x) {
+  console.log(tag, x);
+  return x;
+};
+```
+
+## Category thory
+Category: collection with the following components:
+* A collection of Objects
+* A collection of morphisms (??)
+* A notion of composition of the morphisms
+* A distinguished morphism called identity
+
+###  A collection of Objects - Data Types:
+String, Boolean etc. Sets of all possible values [true, false]. 
+
+### Morphisms == Pure Function
+
+### A notion of composition of the morphisms
+`compose` - just composition of functions
+
+### A distinguished morphism called identity
+```
+var id = function(x) {
+  return x;
+}
+
+// identity
+compose(id, f) == compose(f, id) == f
+// true
+```
+
+
+
