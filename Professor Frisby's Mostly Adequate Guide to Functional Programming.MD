@@ -101,5 +101,13 @@ compose(id, f) == compose(f, id) == f
 // true
 ```
 
+# Chapter 6: Example application
+
+## Declarative coding
+Application to get images from flickr written with functions - code is highly declarative.
+
+```
+var images = _.compose(_.map(_.compose(img, mediaUrl)), _.prop('items'));
+```
 
 
