@@ -20,7 +20,7 @@ Array splice is inpure - it mutates the array.
 
 Use slice.
 
-Using closures in impure - variables outside of the function can change and as the result function is inpure. 
+Using closures in impure - variables outside of the function can change and as the result function is inpure.
 "reliance upon state is one of the largest contributors to system complexity".
 
 Ok, so to create purity use Object.freeze({prop: 21}).
@@ -83,7 +83,7 @@ Category: collection with the following components:
 * A distinguished morphism called identity
 
 ###  A collection of Objects - Data Types:
-String, Boolean etc. Sets of all possible values [true, false]. 
+String, Boolean etc. Sets of all possible values [true, false].
 
 ### Morphisms == Pure Function
 
@@ -110,4 +110,30 @@ Application to get images from flickr written with functions - code is highly de
 var images = _.compose(_.map(_.compose(img, mediaUrl)), _.prop('items'));
 ```
 
+# Chapter 7: Hindley-Milner and Me
 
+```
+// capitalize :: String -> String
+var capitalize = function(s) {
+  return toUpperCase(head(s)) + toLowerCase(tails(s));
+}
+```
+
+functions: `a -> b` a function from 'String' to 'String', or from 'a' to 'b'
+
+It looks like Haskell if we use curry:
+```
+// join :: String -> [String] -> String
+var join = curry((what, xs) => xs.join(what))
+```
+We can use variables in types as in code, eg. 'a'
+```
+// id :: a -> a
+var id = (x) => x;
+
+// map :: (a -> b) -> [a] -> [b]
+var map = curry((f, xs) => xs.map(f))
+```
+
+## Narrowing the possibility
+Parametricity - the function will act on all types in a uniform manner
