@@ -137,3 +137,31 @@ var map = curry((f, xs) => xs.map(f))
 
 ## Narrowing the possibility
 Parametricity - the function will act on all types in a uniform manner
+
+#Chapter 8: Tupperware
+```
+var Container = function(x){
+  this.__value = x;
+}
+Container.of = function(x){
+  return new Container(x);
+}
+Container.of(3)
+Container.of('something')
+
+// (a -> b) -> Container a -> Container b
+Container.prototype.map = function(f){
+  return Container.of(f(this.__value));
+}
+
+Container.of(2).map(function(two){
+  return two + 2;
+})
+//=> Container(4)
+
+```
+## It is Functor
+A Functor is a type that implements `map` and obeys some laws
+Functor == Mappable
+
+// TODO: Schrödinger's Maybe
