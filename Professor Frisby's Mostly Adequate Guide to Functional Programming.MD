@@ -165,7 +165,7 @@ A Functor is a type that implements `map` and obeys some laws
 Functor == Mappable
 
 
-Chapter 9: Monadaic Onions
+# Chapter 9: Monadic Onions
 
 A pointed functor is a functor with an `of` method.
 
