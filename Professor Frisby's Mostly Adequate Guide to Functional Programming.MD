@@ -164,4 +164,20 @@ Container.of(2).map(function(two){
 A Functor is a type that implements `map` and obeys some laws
 Functor == Mappable
 
-// TODO: Schrödinger's Maybe
+
+Chapter 9: Monadaic Onions
+
+A pointed functor is a functor with an `of` method.
+
+Monads are pointed functors that can flatten (have `join` method)
+
+## My chain hits my chest
+```
+// chain :: Monad m => (a -> m b) -> m a -> m b
+var chain = curry(function(f, m){
+  return m.map(f).join(); // or compose(join, map(f))(m)
+})
+```
+chain is ">>=" (pronounced bind or flatMap)
+
+Because chain effortlessly nests effects, we can capture both sequence and variable assignment in a purely functional way.
