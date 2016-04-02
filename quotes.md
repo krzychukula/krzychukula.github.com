@@ -5,8 +5,8 @@
 "Call it lying if you like; but if you prefer to not play the game and to always be honest and upfront, to not complain when others call you obnoxious and arrogant." The 48 Laws of Power by Robert Greene; Joost Elffers
 
 [![Duty Calls](http://imgs.xkcd.com/comics/duty_calls.png "Duty Calls by xkcd")](https://xkcd.com/386/)
- 
-“Don’t complain; just work harder.” 
+
+“Don’t complain; just work harder.”
 ― Randy Pausch
 
 “Installing software is like a first date: if it can't be polite, smart, and generous, what should I expect later?”
@@ -25,3 +25,5 @@
 — Bret Victor
 
 "Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." - Paul Graham (http://paulgraham.com/todo.html)
+
+“A distributed system is one where a machine I’ve never heard of can cause my program to fail.” — Leslie Lamport
