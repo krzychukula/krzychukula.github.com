@@ -5,3 +5,17 @@
 2. Most important idea so far is to use Queues with concurrency/parallelism limit of eg. 2 connections at a time.
 I can help prevent generation of too many requests in case of hight traffic.
 Queues can be used with promises and generators as well.
+
+3. Streams
+```
+var fs = require('fs');
+var zlib = require('zlib')
+var file = process.argv[2]
+
+fs.createReadStream(file)
+  .pipe(zlib.createGzip())
+  .pipe(fs.createWriteStream(file + '.gz'))
+  .on('finish', function() {
+      console.log('File successfully compressed')
+  });
+```
