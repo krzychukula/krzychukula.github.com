@@ -19,3 +19,19 @@ fs.createReadStream(file)
       console.log('File successfully compressed')
   });
 ```
+
+Adding crypto layer is really easy (with gzip used and read/write streams)
+```
+var crypto = require('crypto');
+
+fs.createReadStream(file)
+  .pipe(zlib.createGzip())
+  .pipe(crypto.createCipher('aes192', 'a_shared_key'))
+  .pipe(req)
+
+req
+  .pipe(crypto.createDecipher('aes192', 'a_shared_key'))
+  .pipe(zlib.greateGunzip())
+  .pipe(fs.createWriteStream(filename))
+
+```
