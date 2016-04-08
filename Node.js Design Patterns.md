@@ -35,3 +35,13 @@ req
   .pipe(fs.createWriteStream(filename))
 
 ```
+
+* stream.Readable
+* stream.Writable
+* stream.Duplex
+* stream.Transform
+
+(instances of EventEmitter)
+
+* binary mode
+* object mode
