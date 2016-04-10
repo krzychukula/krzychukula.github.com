@@ -105,3 +105,6 @@ rs.end()
 ```
 
 There is also stream.PassThrough - it's like transform but does not change the data
+
+Multiplexer - joins streams into one
+Demultiplexer - divides them into separate streams.
