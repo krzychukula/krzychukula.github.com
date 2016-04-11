@@ -108,3 +108,5 @@ There is also stream.PassThrough - it's like transform but does not change the d
 
 Multiplexer - joins streams into one
 Demultiplexer - divides them into separate streams.
+
+Strems can be used to control flow as well - especially with some handful modules like merge.
