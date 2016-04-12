@@ -110,3 +110,8 @@ Multiplexer - joins streams into one
 Demultiplexer - divides them into separate streams.
 
 Strems can be used to control flow as well - especially with some handful modules like merge.
+
+
+# Proxy
+Easiest thing is just to change the proxied object and overwrite the function you want to proxy.
+There are also packages like https://www.npmjs.com/package/hooks that you can use.
