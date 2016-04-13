@@ -115,3 +115,7 @@ Strems can be used to control flow as well - especially with some handful module
 # Proxy
 Easiest thing is just to change the proxied object and overwrite the function you want to proxy.
 There are also packages like https://www.npmjs.com/package/hooks that you can use.
+
+# Decorator
+Basically the same as proxy.
+Some info about LevelUp database.
