@@ -119,3 +119,9 @@ There are also packages like https://www.npmjs.com/package/hooks that you can us
 # Decorator
 Basically the same as proxy.
 Some info about LevelUp database.
+
+# Adapter
+Similar as well. Can be useful
+
+# Strategy
+Used eg. by Passport.js for authentication.
