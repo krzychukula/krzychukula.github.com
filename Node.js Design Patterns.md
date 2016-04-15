@@ -125,3 +125,6 @@ Similar as well. Can be useful
 
 # Strategy
 Used eg. by Passport.js for authentication.
+
+# State
+I think it's the first time someone explained it to me as version of Strategy pattern.
