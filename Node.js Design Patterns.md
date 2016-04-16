@@ -128,3 +128,8 @@ Used eg. by Passport.js for authentication.
 
 # State
 I think it's the first time someone explained it to me as version of Strategy pattern.
+
+# Template
+I don't like this one. Context when you use it is much more uncommon than people think.
+Useless to learn about it.
+Yes, streams use it but it's part of their bad API and high level of entry.
