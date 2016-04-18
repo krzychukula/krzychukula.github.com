@@ -136,3 +136,10 @@ Yes, streams use it but it's part of their bad API and high level of entry.
 
 5. Writing modules
 Nice example of Dependency Injection.
+
+6. Recipes
+Requiring asynchronous modules using DI looks like something you already used.
+Initialization queue looks nice but it's going to work only for asynchronous API.
+
+Preinitialization queues: Using State pattern for uninitialized and initialized states.
+Commands are stored on the pending queue to be run when initialization completes.
