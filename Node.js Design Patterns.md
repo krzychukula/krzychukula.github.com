@@ -143,3 +143,9 @@ Initialization queue looks nice but it's going to work only for asynchronous API
 
 Preinitialization queues: Using State pattern for uninitialized and initialized states.
 Commands are stored on the pending queue to be run when initialization completes.
+
+# Asynchronous baching and caching
+
+##batching
+- can be done using queue on top of the batched API.
+it's best used in high-load apps when API are slow.
