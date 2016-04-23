@@ -146,6 +146,12 @@ Commands are stored on the pending queue to be run when initialization completes
 
 # Asynchronous baching and caching
 
-##batching
+## batching
 - can be done using queue on top of the batched API.
 it's best used in high-load apps when API are slow.
+
+## baching and caching are super easy with promises
+
+# CPU-bound
+One way is to use set immediate
+Oneter to use child_process.fork() with EventEmitter communication.
