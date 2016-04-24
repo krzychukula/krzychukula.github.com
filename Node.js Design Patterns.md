@@ -155,3 +155,6 @@ it's best used in high-load apps when API are slow.
 # CPU-bound
 One way is to use set immediate
 Oneter to use child_process.fork() with EventEmitter communication.
+
+
+7. Scalability and Architectural Patterns
