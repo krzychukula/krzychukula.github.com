@@ -160,3 +160,6 @@ Oneter to use child_process.fork() with EventEmitter communication.
 7. Scalability and Architectural Patterns
 cluster users child_process.fork() internally.
 pm2 - as cluster/reverse proxy
+
+Another spectrum are microservices - divide application instead of 
+clustering the monolith.
