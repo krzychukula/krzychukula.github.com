@@ -165,3 +165,15 @@ Another spectrum are microservices - divide application instead of
 clustering the monolith.
 
 8. Messaging and Integration Patterns
+
+# Fundamentals of a Messaging System
+## One-way and request/reply patterns
+
+## Message Types
+* Command Message
+* Event Message
+* Document Message
+
+## Asynchronous messaging and Queues
+
+## Peer-to-peer or broker-based Messaging
