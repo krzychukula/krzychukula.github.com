@@ -177,3 +177,7 @@ clustering the monolith.
 ## Asynchronous messaging and Queues
 
 ## Peer-to-peer or broker-based Messaging
+
+# Publish Subscribe
+Real time chat example
++ Redis
