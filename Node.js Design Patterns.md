@@ -178,6 +178,10 @@ clustering the monolith.
 
 ## Peer-to-peer or broker-based Messaging
 
-# Publish Subscribe
+## Publish Subscribe
 Real time chat example
 + Redis
++ ZeroMQ to implement P2P architecture
+
+## Durable Messages
+AMQP with RabbitMQ
