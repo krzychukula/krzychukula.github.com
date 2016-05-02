@@ -185,3 +185,17 @@ Real time chat example
 
 ## Durable Messages
 AMQP with RabbitMQ
+
+# Pipelines and task distribution patterns
+
+competing consumers = fan-out = ventilator
+
+## The ZeroMQ fan-out/fan-in pattern
+sockets:
+PUSH: sending Messages
+PULL: for receiving
+(both can work in connect mode and bind mode)
+bind: better for durable nodes
+connect: transient - like task workers
+
+## Pipelines and competing consumers in AMQP
