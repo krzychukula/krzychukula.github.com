@@ -5,14 +5,10 @@
   "repository": "",
   "private": true,
   "version": "0.0.0",
-  "devDependencies": {
-    "bower": "*",
-    "gulp": "*",
-    "connect": "*",
-    "gulp-watch": "*",
-    "gulp-livereload": "*"
-  },
   "scripts": {
-    "start": "node ./node_modules/.bin/gulp"
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.0.0"
   }
 }
