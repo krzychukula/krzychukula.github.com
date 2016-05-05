@@ -27,3 +27,7 @@
 "Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." - Paul Graham (http://paulgraham.com/todo.html)
 
 “A distributed system is one where a machine I’ve never heard of can cause my program to fail.” — Leslie Lamport
+
+“One of the lessons we learned from running the pilot groups of the course, was that developing small projects was a good way to shift yourself out of a rut and back onto the rapid part of the learning curve. In the full course, which we’ll open for a new session after these lessons, we’ll be guiding a new set of students through the process of designing and executing their own deliberate practice projects.
+
+In the meantime, ask yourself this: Are your the skills that matter for having a career you love improving as you’d like? If not, how could you improve the speed and quality of feedback you get to escape the Doctor’s Paradox.” - Scott Young (Top Performer course)
