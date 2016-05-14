@@ -27,3 +27,6 @@
 "Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." - Paul Graham (http://paulgraham.com/todo.html)
 
 “A distributed system is one where a machine I’ve never heard of can cause my program to fail.” — Leslie Lamport
+
+“It's important for nerds to realize, too, that school is not life. School is a strange, artificial thing, half sterile and half feral. It's all-encompassing, like life, but it isn't the real thing. It's only temporary, and if you look, you can see beyond it even while you're still in it.”
+― Paul Graham, Hackers & Painters: Big Ideas from the Computer Age
