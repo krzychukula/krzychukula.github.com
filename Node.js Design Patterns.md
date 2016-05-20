@@ -146,6 +146,56 @@ Commands are stored on the pending queue to be run when initialization completes
 
 # Asynchronous baching and caching
 
-##batching
+## batching
 - can be done using queue on top of the batched API.
 it's best used in high-load apps when API are slow.
+
+## baching and caching are super easy with promises
+
+# CPU-bound
+One way is to use set immediate
+Oneter to use child_process.fork() with EventEmitter communication.
+
+
+7. Scalability and Architectural Patterns
+cluster users child_process.fork() internally.
+pm2 - as cluster/reverse proxy
+
+Another spectrum are microservices - divide application instead of
+clustering the monolith.
+
+8. Messaging and Integration Patterns
+
+# Fundamentals of a Messaging System
+## One-way and request/reply patterns
+
+## Message Types
+* Command Message
+* Event Message
+* Document Message
+
+## Asynchronous messaging and Queues
+
+## Peer-to-peer or broker-based Messaging
+
+## Publish Subscribe
+Real time chat example
++ Redis
++ ZeroMQ to implement P2P architecture
+
+## Durable Messages
+AMQP with RabbitMQ
+
+# Pipelines and task distribution patterns
+
+competing consumers = fan-out = ventilator
+
+## The ZeroMQ fan-out/fan-in pattern
+sockets:
+PUSH: sending Messages
+PULL: for receiving
+(both can work in connect mode and bind mode)
+bind: better for durable nodes
+connect: transient - like task workers
+
+## Pipelines and competing consumers in AMQP
