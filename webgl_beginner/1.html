@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Setting up Canvas</title>
+	<style>
+		canvas {
+			border: 3px dotted blue;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="game" width="800" height="600"></canvas>
+	<script>
+		var gl = null;
+		function getGLContext() {
+			var canvas = document.getElementById('game');
+
+			gl = canvas.getContext('webgl');
+
+			console.log(gl);
+		}
+		document.addEventListener('DOMContentLoaded', getGLContext)
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch 1.html with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceRoot}/webgl_beginner/1.html",
+            "webRoot": "${workspaceRoot}"
+        }
+    ]
+}
