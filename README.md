@@ -3,9 +3,9 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 
 #Quotes
 
-"Self-education is, I firmy believe the only kind of education there is" Isaac Asimov
+"Self-education is, I firmy believe the only kind of education there is” - Isaac Asimov
 
-"Call it lying if you like; but if you prefer to not play the game and to always be honest and upfront, to not complain when others call you obnoxious and arrogant." The 48 Laws of Power by Robert Greene; Joost Elffers
+"Call it lying if you like; but if you prefer to not play the game and to always be honest and upfront, to not complain when others call you obnoxious and arrogant.” - The 48 Laws of Power by Robert Greene; Joost Elffers
 
 [![Duty Calls](http://imgs.xkcd.com/comics/duty_calls.png "Duty Calls by xkcd")](https://xkcd.com/386/)
 
@@ -27,21 +27,30 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 “Learning about "for" loops is not learning to program, any more than learning about pencils is learning to draw.”
 — Bret Victor
 
-"Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." - Paul Graham (http://paulgraham.com/todo.html)
+"Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." 
+- Paul Graham (http://paulgraham.com/todo.html)
 
-“A distributed system is one where a machine I’ve never heard of can cause my program to fail.” — Leslie Lamport
+“A distributed system is one where a machine I’ve never heard of can cause my program to fail.” 
+— Leslie Lamport
 
 
 “It's important for nerds to realize, too, that school is not life. School is a strange, artificial thing, half sterile and half feral. It's all-encompassing, like life, but it isn't the real thing. It's only temporary, and if you look, you can see beyond it even while you're still in it.”
 ― Paul Graham, Hackers & Painters: Big Ideas from the Computer Age
 
-“One of the lessons we learned from running the pilot groups of the course, was that developing small projects was a good way to shift yourself out of a rut and back onto the rapid part of the learning curve. In the full course, which we’ll open for a new session after these lessons, we’ll be guiding a new set of students through the process of designing and executing their own deliberate practice projects.
+“One of the lessons we learned from running the pilot groups of the course, was that developing small projects was a good way to shift yourself out of a rut and back onto the rapid part of the learning curve. In the full course, which we’ll open for a new session after these lessons, we’ll be guiding a new set of students through the process of designing and executing their own deliberate practice projects.”
+- Scott Young (Top Performer course)
 
-“In the meantime, ask yourself this: Are your the skills that matter for having a career you love improving as you’d like? If not, how could you improve the speed and quality of feedback you get to escape the Doctor’s Paradox.” - Scott Young (Top Performer course)
+“In the meantime, ask yourself this: Are your the skills that matter for having a career you love improving as you’d like? If not, how could you improve the speed and quality of feedback you get to escape the Doctor’s Paradox.”
+- Scott Young (Top Performer course)
 
-“ninety percent of everything is crap” - Sturgeon's revelation (Sturgeon's law)
-“90% of everything is crap. That is true, whether you are talking about physics, chemistry, evolutionary psychology, sociology, medicine—you name it—rock music, country western. 90% of everything is crap.” - Daniel Dennett
-“Most things are bullshit - don't trust mass opinion” - Pieter Hintjens
+“ninety percent of everything is crap”
+- Sturgeon's revelation (Sturgeon's law)
+
+“90% of everything is crap. That is true, whether you are talking about physics, chemistry, evolutionary psychology, sociology, medicine—you name it—rock music, country western. 90% of everything is crap.”
+- Daniel Dennett
+
+“Most things are bullshit - don't trust mass opinion”
+- Pieter Hintjens
 
 # Talks:
 * https://yow.eventer.com/yow-2014-1222/stop-treading-water-learning-to-learn-by-edward-kmett-1750 You have a new brain every 7 years so you have to relearn things from time to time - maybe even learn deeper every time.
