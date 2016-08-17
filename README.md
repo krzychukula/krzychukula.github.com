@@ -65,6 +65,7 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 * agilemanifesto.org
 * https://www.facebook.com/notes/kent-beck/paint-drip-people/1226700000696195/ Paint Drip People by Kent Beck. Skills are driven by fun and interests.
 * http://www.theeffectiveengineer.com/blog/master-adjacent-disciplines Master Adjacent Disciplines
+* https://medium.freecodecamp.com/being-a-developer-after-40-3c5dd112210c Forget the Hype
 
 #TODO:
     [ ] think about creation of page with your values maybe cms.js? Or maybe post it on your blog?
