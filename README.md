@@ -37,17 +37,26 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 
 “One of the lessons we learned from running the pilot groups of the course, was that developing small projects was a good way to shift yourself out of a rut and back onto the rapid part of the learning curve. In the full course, which we’ll open for a new session after these lessons, we’ll be guiding a new set of students through the process of designing and executing their own deliberate practice projects.
 
-In the meantime, ask yourself this: Are your the skills that matter for having a career you love improving as you’d like? If not, how could you improve the speed and quality of feedback you get to escape the Doctor’s Paradox.” - Scott Young (Top Performer course)
+“In the meantime, ask yourself this: Are your the skills that matter for having a career you love improving as you’d like? If not, how could you improve the speed and quality of feedback you get to escape the Doctor’s Paradox.” - Scott Young (Top Performer course)
 
+“ninety percent of everything is crap” - Sturgeon's revelation (Sturgeon's law)
+“90% of everything is crap. That is true, whether you are talking about physics, chemistry, evolutionary psychology, sociology, medicine—you name it—rock music, country western. 90% of everything is crap.” - Daniel Dennett
+“Most things are bullshit - don't trust mass opinion” - Pieter Hintjens
 
-Great talks:
+# Talks:
 * https://yow.eventer.com/yow-2014-1222/stop-treading-water-learning-to-learn-by-edward-kmett-1750 You have a new brain every 7 years so you have to relearn things from time to time - maybe even learn deeper every time.
-* https://www.youtube.com/watch?v=PUv66718DII - Importance of the immediate feedback while working.
+* https://www.youtube.com/watch?v=PUv66718DII - Inventing on Principle by Bret Victor. Importance of the immediate feedback while working.
+* https://www.youtube.com/watch?v=USc-yLHXNUg - Software, Faster by Dan North
 
+# Courses:
+* https://www.coursera.org/learn/learning-how-to-learn A lot of tools and tips that help learn and work effectively
 
+# Ideas 
+* http://scs-architecture.org - Self-Contained Systems
+* agilemanifesto.org
+* https://www.facebook.com/notes/kent-beck/paint-drip-people/1226700000696195/ Paint Drip People by Kent Beck. Skills are driven by fun and interests.
 
 #TODO:
     [ ] think about creation of page with your values maybe cms.js? Or maybe post it on your blog?
-    [ ] http://scs-architecture.org/ - Self-Contained Systems
     [ ] Use jekyll2?
     [ ] Remove colors.css?
