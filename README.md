@@ -47,10 +47,10 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 — Sturgeon's revelation (Sturgeon's law)
 
 “90% of everything is crap. That is true, whether you are talking about physics, chemistry, evolutionary psychology, sociology, medicine—you name it—rock music, country western. 90% of everything is crap.”
-- Daniel Dennett
+— Daniel Dennett
 
 “Most things are bullshit - don't trust mass opinion”
-- Pieter Hintjens
+— Pieter Hintjens
 
 # Talks:
 * https://yow.eventer.com/yow-2014-1222/stop-treading-water-learning-to-learn-by-edward-kmett-1750 You have a new brain every 7 years so you have to relearn things from time to time - maybe even learn deeper every time.
