@@ -33,7 +33,7 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 — Bret Victor
 
 "Don't ignore your dreams; don't work too much; say what you think; cultivate friendships; be happy." 
-- Paul Graham (http://paulgraham.com/todo.html)
+— Paul Graham (http://paulgraham.com/todo.html)
 
 “A distributed system is one where a machine I’ve never heard of can cause my program to fail.” 
 — Leslie Lamport
