@@ -71,6 +71,7 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 * https://www.facebook.com/notes/kent-beck/paint-drip-people/1226700000696195/ Paint Drip People by Kent Beck. Skills are driven by fun and interests.
 * http://www.theeffectiveengineer.com/blog/master-adjacent-disciplines Master Adjacent Disciplines
 * https://medium.freecodecamp.com/being-a-developer-after-40-3c5dd112210c Forget the Hype
+* https://medium.com/@billjordan1/the-quiet-crisis-unfolding-in-software-development-cffbdafbf450 Great advice for managers.
 
 # Best Books:
 * https://www.goodreads.com/book/show/44882.Code
