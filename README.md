@@ -1,6 +1,11 @@
 
 Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 
+#TODO:
+    [ ] think about creation of page with your values maybe cms.js? Or maybe post it on your blog?
+    [ ] Use jekyll2?
+    [ ] Remove colors.css?
+    
 #Quotes
 
 "Self-education is, I firmy believe the only kind of education there is” - Isaac Asimov
@@ -60,14 +65,29 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 # Courses:
 * https://www.coursera.org/learn/learning-how-to-learn A lot of tools and tips that help learn and work effectively
 
-# Ideas 
+# Ideas:
 * http://scs-architecture.org - Self-Contained Systems
 * agilemanifesto.org
 * https://www.facebook.com/notes/kent-beck/paint-drip-people/1226700000696195/ Paint Drip People by Kent Beck. Skills are driven by fun and interests.
 * http://www.theeffectiveengineer.com/blog/master-adjacent-disciplines Master Adjacent Disciplines
 * https://medium.freecodecamp.com/being-a-developer-after-40-3c5dd112210c Forget the Hype
 
-#TODO:
-    [ ] think about creation of page with your values maybe cms.js? Or maybe post it on your blog?
-    [ ] Use jekyll2?
-    [ ] Remove colors.css?
+# Best Books:
+* https://www.goodreads.com/book/show/44882.Code
+* https://www.goodreads.com/book/show/13705402-effective-javascript
+* https://www.goodreads.com/book/show/11457105-design-for-hackers
+* https://krzychukula.blogspot.com.es/2014/06/book-review-presentation-zen-design-by.html
+* http://calnewport.com/books/so-good/
+* http://calnewport.com/books/deep-work/
+* https://krzychukula.blogspot.com/2015/03/book-review-personal-mba-by-josh-kaufman.html
+* http://www.goodreads.com/book/show/28815.Influence
+* https://www.goodreads.com/book/show/17255186-the-phoenix-project
+* https://www.goodreads.com/book/show/18077875-essentialism
+* https://www.goodreads.com/book/show/6452796-drive
+* https://www.goodreads.com/book/show/68985.The_Power_of_Full_Engagement
+* https://www.goodreads.com/book/show/66354.Flow
+* https://www.goodreads.com/book/show/6899290-your-brain-at-work
+* https://www.goodreads.com/book/show/69242.Made_to_Stick
+* https://www.goodreads.com/book/show/7598960-switch
+* https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things
+
