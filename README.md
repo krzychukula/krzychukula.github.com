@@ -77,18 +77,19 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 * https://www.goodreads.com/book/show/44882.Code
 * https://www.goodreads.com/book/show/13705402-effective-javascript
 * https://www.goodreads.com/book/show/11457105-design-for-hackers
-* https://krzychukula.blogspot.com.es/2014/06/book-review-presentation-zen-design-by.html
+* [Presentation Zen Design](https://krzychukula.blogspot.com.es/2014/06/book-review-presentation-zen-design-by.html)
 * http://calnewport.com/books/so-good/
 * http://calnewport.com/books/deep-work/
-* https://krzychukula.blogspot.com/2015/03/book-review-personal-mba-by-josh-kaufman.html
+* [Personal MBA](https://krzychukula.blogspot.com/2015/03/book-review-personal-mba-by-josh-kaufman.html)
 * http://www.goodreads.com/book/show/28815.Influence
 * https://www.goodreads.com/book/show/17255186-the-phoenix-project
 * https://www.goodreads.com/book/show/18077875-essentialism
 * https://www.goodreads.com/book/show/6452796-drive
-* https://www.goodreads.com/book/show/68985.The_Power_of_Full_Engagement
+* [The Power of Full Engagement](https://www.goodreads.com/book/show/68985.The_Power_of_Full_Engagement)
 * https://www.goodreads.com/book/show/66354.Flow
-* https://www.goodreads.com/book/show/6899290-your-brain-at-work
+* [Your Brain at Work](https://www.goodreads.com/book/show/6899290-your-brain-at-work)
+* [Search Inside Yourself](https://www.goodreads.com/book/show/12921211-search-inside-yourself)
 * https://www.goodreads.com/book/show/69242.Made_to_Stick
 * https://www.goodreads.com/book/show/7598960-switch
-* https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things
+* [The Design of Everyday Things](https://www.goodreads.com/book/show/840.The_Design_of_Everyday_Things)
 
