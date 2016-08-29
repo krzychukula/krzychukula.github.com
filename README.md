@@ -54,6 +54,9 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 “90% of everything is crap. That is true, whether you are talking about physics, chemistry, evolutionary psychology, sociology, medicine—you name it—rock music, country western. 90% of everything is crap.”
 — Daniel Dennett
 
+“We are what we pretend to be, so we must be careful about what we pretend to be.”
+— Kurt Vonnegut
+
 “Most things are bullshit - don't trust mass opinion”
 — Pieter Hintjens
 
