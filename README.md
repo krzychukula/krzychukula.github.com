@@ -60,6 +60,9 @@ Website available at: [krzychukula.github.io](http://krzychukula.github.io)
 “Most things are bullshit - don't trust mass opinion”
 — Pieter Hintjens
 
+“Most people spend more time and energy going around problems than trying to solve them.”
+— Henry Ford
+
 # Talks:
 * https://yow.eventer.com/yow-2014-1222/stop-treading-water-learning-to-learn-by-edward-kmett-1750 You have a new brain every 7 years so you have to relearn things from time to time - maybe even learn deeper every time.
 * https://www.youtube.com/watch?v=PUv66718DII - Inventing on Principle by Bret Victor. Importance of the immediate feedback while working.
